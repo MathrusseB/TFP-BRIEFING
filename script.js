@@ -76,6 +76,27 @@ function tickAct2(t) {
   });
 }
 
+/* === Act 3 sub-animations === */
+function tickAct3(t) {
+  if (t < 52 || t >= 80) return;
+  const proofs = ['proof1', 'proof2', 'proof3', 'proof4'];
+  proofs.forEach(id => {
+    const content = document.querySelector(`#${id} .proof-content`);
+    if (document.getElementById(id).classList.contains('active')) {
+      content.classList.add('show');
+    } else {
+      content.classList.remove('show');
+    }
+  });
+  /* Proof 4 credentials stagger */
+  if (t >= 73 && t < 80) {
+    const items = document.querySelectorAll('#proof4 .credential-item');
+    items.forEach((item, i) => {
+      if (t >= 73.5 + i * 0.3) item.classList.add('show');
+    });
+  }
+}
+
 /* Volume fade at end */
 function fadeVolume(t) {
   if (t >= 120) {
@@ -92,6 +113,7 @@ function tick() {
   manageVideos(t);
   tickAct1(t);
   tickAct2(t);
+  tickAct3(t);
   fadeVolume(t);
   requestAnimationFrame(tick);
 }
