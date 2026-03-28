@@ -97,6 +97,26 @@ function tickAct3(t) {
   }
 }
 
+/* === Act 4 sub-animations (Apex Box) === */
+function tickAct4(t) {
+  if (t < 80 || t >= 115) return;
+  const label = document.querySelector('.act4-label');
+  const title = document.querySelector('.act4-title');
+  const line = document.querySelector('.act4-line');
+  const img = document.querySelector('.apex-img');
+  const tagline = document.querySelector('.apex-tagline');
+  const features = document.querySelectorAll('.apex-feature');
+
+  if (t >= 80) label.classList.add('show');
+  if (t >= 80.3) title.classList.add('show');
+  if (t >= 80.6) line.classList.add('show');
+  if (t >= 84) { img.classList.add('show'); tagline.classList.add('show'); }
+  /* Features stagger every 2.5s starting at t=90 */
+  features.forEach((f, i) => {
+    if (t >= 90 + i * 2.5) f.classList.add('show');
+  });
+}
+
 /* Volume fade at end */
 function fadeVolume(t) {
   if (t >= 120) {
@@ -114,6 +134,7 @@ function tick() {
   tickAct1(t);
   tickAct2(t);
   tickAct3(t);
+  tickAct4(t);
   fadeVolume(t);
   requestAnimationFrame(tick);
 }
