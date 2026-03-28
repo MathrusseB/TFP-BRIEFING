@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFP — Capabilities Briefing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Audio -->
+  <audio id="music" preload="auto" src="assets/audio/music.mp3"></audio>
+
+  <!-- Overlays -->
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="scene">
+    <img src="assets/img/tfp-logo.png" alt="TFP Logo" class="start-logo">
+    <h1 class="start-title">TASK FORCE PROTECTION LLC</h1>
+    <p class="start-subtitle">CAPABILITIES BRIEFING</p>
+    <button id="play-btn">▶ CLICK TO BEGIN</button>
+  </div>
+
+  <!-- Act 1 — Identity -->
+  <div id="act1" class="scene">
+    <video class="bg-video" src="assets/video/act1-bg.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content act1-content">
+      <img src="assets/img/tfp-logo.png" alt="TFP Logo" class="act1-logo">
+      <div class="gold-line act1-line"></div>
+      <h2 class="act1-name">TASK FORCE PROTECTION LLC</h2>
+      <p class="act1-tagline">Premier Private Security · Service-Disabled Veteran-Owned</p>
+    </div>
+  </div>
+
+  <!-- Act 2 — Capabilities -->
+  <div id="card1" class="scene">
+    <video class="bg-video" src="assets/video/act2-aerial.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content card-content">
+      <span class="card-label">01</span>
+      <h2 class="card-title">AERIAL DRONE SURVEILLANCE</h2>
+      <div class="gold-line card-line"></div>
+      <p class="card-desc">Real-time overhead monitoring for venues, events, and district perimeters</p>
+    </div>
+  </div>
+
+  <div id="card2" class="scene">
+    <video class="bg-video" src="assets/video/act2-counterterror.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content card-content">
+      <span class="card-label">02</span>
+      <h2 class="card-title">COUNTER-TERRORISM OPERATIONS</h2>
+      <div class="gold-line card-line"></div>
+      <p class="card-desc">Special Operations veterans integrated into planning, threat assessment, and ground response</p>
+    </div>
+  </div>
+
+  <div id="card3" class="scene">
+    <video class="bg-video" src="assets/video/act2-ground.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content card-content">
+      <span class="card-label">03</span>
+      <h2 class="card-title">ARMED GROUND TEAMS</h2>
+      <div class="gold-line card-line"></div>
+      <p class="card-desc">Uniformed and plainclothes personnel — former military and law enforcement throughout the district</p>
+    </div>
+  </div>
+
+  <div id="card4" class="scene">
+    <video class="bg-video" src="assets/video/act2-command.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content card-content">
+      <span class="card-label">04</span>
+      <h2 class="card-title">MOBILE COMMAND CENTER</h2>
+      <div class="gold-line card-line"></div>
+      <p class="card-desc">On-site coordination hub for real-time situational awareness and rapid response</p>
+    </div>
+  </div>
+
+  <div id="card5" class="scene">
+    <video class="bg-video" src="assets/video/act2-medical.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content card-content">
+      <span class="card-label">05</span>
+      <h2 class="card-title">MEDICAL TRAUMA RESPONSE</h2>
+      <div class="gold-line card-line"></div>
+      <p class="card-desc">Stop the Bleed certified — emergency first response before EMS arrival</p>
+    </div>
+  </div>
+
+  <!-- Act 3 — Proof Points -->
+  <div id="proof1" class="scene">
+    <video class="bg-video" src="assets/video/act3-bg.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content proof-content">
+      <h2 class="proof-title">PATRICK MAHOMES</h2>
+      <p class="proof-subtitle">Kansas City Chiefs — NFL MVP & Super Bowl Champion</p>
+      <p class="proof-detail">Ongoing executive protection</p>
+    </div>
+  </div>
+
+  <div id="proof2" class="scene">
+    <video class="bg-video" src="assets/video/act3-bg.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content proof-content">
+      <h2 class="proof-title">DIPLOMATIC SECURITY</h2>
+      <p class="proof-subtitle">International Dignitary Protection</p>
+      <p class="proof-detail">Foreign diplomatic personnel operating within the United States</p>
+    </div>
+  </div>
+
+  <div id="proof3" class="scene">
+    <video class="bg-video" src="assets/video/act3-bg.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content proof-content">
+      <h2 class="proof-title">FILM & PRODUCTION SECURITY</h2>
+      <p class="proof-subtitle">Kansas City Production Companies</p>
+      <p class="proof-detail">Set security and talent protection across major productions</p>
+    </div>
+  </div>
+
+  <div id="proof4" class="scene">
+    <video class="bg-video" src="assets/video/act3-bg.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content proof-content">
+      <h2 class="proof-title">CREDENTIALS</h2>
+      <div class="credentials-list">
+        <p class="credential-item"><span class="gold">✓</span> Federal Protective Services — Standard Exceeded</p>
+        <p class="credential-item"><span class="gold">✓</span> KCPD Firing Range Qualified</p>
+        <p class="credential-item"><span class="gold">✓</span> Counter-Terrorism Operations Trained</p>
+        <p class="credential-item"><span class="gold">✓</span> Special Operations Personnel</p>
+        <p class="credential-item"><span class="gold">✓</span> Service-Disabled Veteran-Owned (SDVOSB)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Act 4 — The Edge: Apex Box -->
+  <div id="act4" class="scene">
+    <video class="bg-video" src="assets/video/act4-drone.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content act4-content">
+      <span class="act4-label">INTEGRATED TECHNOLOGY</span>
+      <h2 class="act4-title">APEX</h2>
+      <div class="gold-line act4-line"></div>
+      <img src="assets/img/apex-pictogram.png" alt="Apex Box" class="apex-img">
+      <p class="apex-tagline">DEPLOY ANYWHERE. DEFEND EVERYWHERE.</p>
+      <div class="apex-features">
+        <p class="apex-feature">GUNSHOT DETECTION & BEHAVIOR ANALYSIS</p>
+        <p class="apex-feature">THERMAL & NIGHT VISION SURVEILLANCE</p>
+        <p class="apex-feature">LICENSE PLATE RECOGNITION & CROWD TRACKING</p>
+        <p class="apex-feature">AUTONOMOUS DRONE SURVEILLANCE</p>
+        <p class="apex-feature">TRUMAN PDR & Hx OIC INTEGRATION</p>
+        <p class="apex-feature powered-by">POWERED BY SECURE PASSAGE</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Act 5 — Close -->
+  <div id="act5" class="scene">
+    <video class="bg-video" src="assets/video/act5-bg.mp4" muted loop playsinline preload="none"></video>
+    <div class="scene-content act5-content">
+      <img src="assets/img/tfp-logo.png" alt="TFP Logo" class="act5-logo">
+      <h2 class="act5-name">TASK FORCE PROTECTION LLC</h2>
+      <div class="gold-line act5-line"></div>
+      <p class="act5-phone">(660) 227-9063</p>
+      <p class="act5-url">taskforceprotectiongov.com</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
