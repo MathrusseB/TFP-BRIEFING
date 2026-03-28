@@ -62,6 +62,20 @@ function tickAct1(t) {
   if (t >= 8) { name.classList.add('show'); tag.classList.add('show'); }
 }
 
+/* === Act 2 sub-animations === */
+function tickAct2(t) {
+  if (t < 12 || t >= 52) return;
+  const cards = ['card1', 'card2', 'card3', 'card4', 'card5'];
+  cards.forEach(id => {
+    const content = document.querySelector(`#${id} .card-content`);
+    if (document.getElementById(id).classList.contains('active')) {
+      content.classList.add('show');
+    } else {
+      content.classList.remove('show');
+    }
+  });
+}
+
 /* Volume fade at end */
 function fadeVolume(t) {
   if (t >= 120) {
@@ -77,6 +91,7 @@ function tick() {
   activateScene(t);
   manageVideos(t);
   tickAct1(t);
+  tickAct2(t);
   fadeVolume(t);
   requestAnimationFrame(tick);
 }
