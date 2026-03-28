@@ -117,6 +117,20 @@ function tickAct4(t) {
   });
 }
 
+/* === Act 5 sub-animations (Close) === */
+function tickAct5(t) {
+  if (t < 115 || t >= 128) return;
+  const logo = document.querySelector('.act5-logo');
+  const name = document.querySelector('.act5-name');
+  const line = document.querySelector('.act5-line');
+  const phone = document.querySelector('.act5-phone');
+  const url = document.querySelector('.act5-url');
+
+  if (t >= 118) logo.classList.add('show');
+  if (t >= 118) { name.classList.add('show'); line.classList.add('show'); }
+  if (t >= 119) { phone.classList.add('show'); url.classList.add('show'); }
+}
+
 /* Volume fade at end */
 function fadeVolume(t) {
   if (t >= 120) {
@@ -135,6 +149,7 @@ function tick() {
   tickAct2(t);
   tickAct3(t);
   tickAct4(t);
+  tickAct5(t);
   fadeVolume(t);
   requestAnimationFrame(tick);
 }
