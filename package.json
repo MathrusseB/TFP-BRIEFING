@@ -1,0 +1,11 @@
+{
+  "name": "tfp-briefing",
+  "version": "1.0.0",
+  "description": "Task Force Protection — Capabilities Briefing",
+  "scripts": {
+    "start": "npx serve -s . -l $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
