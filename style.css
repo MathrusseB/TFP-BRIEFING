@@ -117,14 +117,15 @@ body {
 .act4-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px, 9vw, 100px); color: var(--white); opacity: 0; transition: opacity 0.5s ease; }
 .act4-title.show { opacity: 1; }
 .act4-line.show { width: 200px; }
-.apex-img { width: 350px; max-width: 80vw; margin: 16px 0; opacity: 0; transition: opacity 0.8s ease; }
+.apex-img { width: 400px; max-width: 80vw; margin: 16px 0; opacity: 0; transition: opacity 0.8s ease; border-radius: 8px; }
 .apex-img.show { opacity: 1; }
 .apex-tagline { font-size: 15px; font-weight: 500; color: var(--gold); letter-spacing: 0.25em; opacity: 0; transition: opacity 0.5s ease; }
 .apex-tagline.show { opacity: 1; }
 .apex-features { margin-top: 20px; }
 .apex-feature { font-size: 13px; font-weight: 400; color: var(--white); letter-spacing: 0.1em; margin-bottom: 6px; opacity: 0; transition: opacity 0.5s ease; }
 .apex-feature.show { opacity: 1; }
-.powered-by { color: var(--gold); font-size: 12px; }
+.powered-by { color: var(--gold); font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.apex-badge { width: 60px; height: auto; vertical-align: middle; }
 
 /* ===== Act 5 — Close ===== */
 .act5-content { opacity: 0; transition: opacity 0.8s ease; }
