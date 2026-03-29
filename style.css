@@ -71,7 +71,7 @@ body {
 }
 
 /* ===== Act 1 — Identity ===== */
-.act1-content { opacity: 0; }
+.act1-content { opacity: 1; }
 .act1-logo { width: 180px; transform: scale(0.7); transition: transform 0.8s ease-out, opacity 0.8s ease; opacity: 0; }
 .act1-logo.show { transform: scale(1); opacity: 1; }
 .act1-line.show { width: 200px; }
@@ -97,17 +97,27 @@ body {
 /* ===== Act 3 — Proof Points ===== */
 .proof-content {
   text-align: left; align-items: flex-start;
-  padding-left: 10vw; width: 100%;
-  opacity: 0; transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  padding: 0 8vw; width: 100%;
+  opacity: 0; transition: opacity 0.8s ease;
 }
-.proof-content.show { opacity: 1; transform: translateY(0); }
-.proof-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(32px, 4.5vw, 52px); color: var(--white); }
-.proof-subtitle { font-size: 16px; font-weight: 500; color: var(--gold); margin-top: 8px; }
-.proof-detail { font-size: 14px; font-weight: 400; color: var(--grey); margin-top: 6px; }
-.credentials-list { margin-top: 12px; }
-.credential-item { font-size: 14px; font-weight: 400; color: var(--white); margin-bottom: 8px; opacity: 0; transition: opacity 0.4s ease; }
-.credential-item.show { opacity: 1; }
+.proof-content.show { opacity: 1; }
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 48px;
+  max-width: 900px;
+}
+.proof-item { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.proof-item.show { opacity: 1; transform: translateY(0); }
+.proof-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(22px, 3vw, 32px); color: var(--white); }
+.proof-role { font-size: 13px; font-weight: 500; color: var(--gold); margin-top: 4px; }
+.proof-desc { font-size: 12px; font-weight: 400; color: var(--grey); margin-top: 4px; }
+.credential-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.cred-tag {
+  font-size: 11px; font-weight: 500; color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.3); padding: 3px 10px;
+  letter-spacing: 0.05em;
+}
 
 /* ===== Act 4 — Apex Box ===== */
 .act4-content { opacity: 0; transition: opacity 0.6s ease; }
